@@ -197,8 +197,21 @@ a {
   .site-navbar .site-logo {
     font-weight: 200; }
     .site-navbar .site-logo a {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       font-weight: 200;
       color: #fff; }
+    .site-navbar .site-logo img {
+      display: block;
+      width: auto;
+      max-width: 160px;
+      height: 52px;
+      -o-object-fit: contain;
+      object-fit: contain; }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a {
@@ -500,8 +513,22 @@ a {
   @media (min-width: 768px) {
     .site-heading {
       font-size: 3rem; } }
-  .site-heading strong {
-    font-weight: 900; }
+.site-heading strong {
+  font-weight: 900; }
+
+.site-map-location .site-map-frame {
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.35);
+  background: #fff; }
+  .site-map-location .site-map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0; }
 
 .site-block-1 {
   padding-top: 50px; }
@@ -874,7 +901,142 @@ a {
     line-height: 40px;
     border-radius: 50%;
     border: 1px solid #ccc; }
-  .site-block-27 ul li.active a, .site-block-27 ul li.active span {
+.site-block-27 ul li.active a, .site-block-27 ul li.active span {
     background: #f23a2e;
     color: #fff;
     border: 1px solid transparent; }
+
+/* Brand palette override: logo red, logo blue, and white */
+body {
+  color: #27a9e1;
+  background: #fff; }
+
+::-moz-selection {
+  background: #ed1c24;
+  color: #fff; }
+
+::selection {
+  background: #ed1c24;
+  color: #fff; }
+
+a {
+  color: #27a9e1; }
+  a:hover, a:active, a:focus {
+    color: #ed1c24; }
+
+.text-black,
+.site-heading,
+.site-section-heading,
+.site-block-3 .feature h3,
+.site-mobile-menu .site-nav-wrap a,
+.site-navbar .site-navigation .site-menu .has-children .dropdown a {
+  color: #27a9e1 !important; }
+
+.text-black-opacity-5 {
+  color: rgba(39, 169, 225, 0.78) !important; }
+
+.site-footer p,
+.site-footer a,
+.block-25 ul li a .text .heading,
+.player .position,
+.post-entry .date {
+  color: rgba(255, 255, 255, 0.78) !important; }
+
+.bg-black,
+.site-footer,
+.site-block-feature {
+  background: #27a9e1 !important; }
+
+.bg-light,
+.site-block-appointment {
+  background: #fff !important; }
+
+.bg-primary,
+.btn-primary,
+.site-block-27 ul li.active a,
+.site-block-27 ul li.active span,
+.player .team-number {
+  background-color: #ed1c24 !important;
+  border-color: #ed1c24 !important;
+  color: #fff !important; }
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #27a9e1 !important;
+  border-color: #27a9e1 !important;
+  color: #fff !important; }
+
+.btn-secondary {
+  background-color: #27a9e1 !important;
+  border-color: #27a9e1 !important;
+  color: #fff !important; }
+
+.form-control:active,
+.form-control:focus {
+  border-color: #ed1c24; }
+
+.site-section-heading:before,
+.site-section-heading.text-center:before,
+.block-12 .text .text-inner:before {
+  background: #ed1c24; }
+
+.site-navbar-wrap a,
+.site-navbar .site-logo a,
+.site-navbar .site-navigation .site-menu .active > a,
+.site-navbar .site-navigation .site-menu > li > a:hover,
+.site-navbar .site-navigation .site-menu .has-children:hover > a,
+.site-blocks-cover h1,
+.site-blocks-cover p,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer h5,
+.site-footer .footer-heading,
+.site-block-feature h3,
+.site-block-feature p,
+.block-25 ul li a:hover .text .heading,
+.block-12 .text-overlay h2,
+.block-12 .text .meta {
+  color: #fff !important; }
+
+.site-navbar .site-navigation .site-menu > li > a,
+.site-blocks-cover .sub-text,
+.text-white-opacity-5 {
+  color: rgba(255, 255, 255, 0.78) !important; }
+
+.site-mobile-menu .site-nav-wrap a:hover,
+.site-mobile-menu .site-nav-wrap li.active > a,
+.site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span:hover,
+.site-block-half.site-block-video .image .play-button,
+.block-16 figure .play-button,
+.block-25 ul li a .meta {
+  color: #ed1c24 !important; }
+
+.site-blocks-cover.overlay:before,
+.bg-image.overlay:before {
+  background: rgba(39, 169, 225, 0.55); }
+
+.bg-image.overlay-primary:before {
+  background: rgba(237, 28, 36, 0.9); }
+
+.site-wrap:before {
+  background: rgba(39, 169, 225, 0.85); }
+
+.site-map-location .site-map-frame,
+.site-block-appointment form,
+.bg-light form,
+.site-block-3 .feature:hover,
+.site-block-3 .feature:active,
+.site-block-3 .feature:focus,
+.site-block-3 .feature.active,
+.site-block-testimony.active,
+.block-12 .text .text-inner {
+  -webkit-box-shadow: 0 5px 20px -2px rgba(39, 169, 225, 0.18);
+  box-shadow: 0 5px 20px -2px rgba(39, 169, 225, 0.18); }
+
+.post-entry,
+.site-block-27 ul li a,
+.site-block-27 ul li span,
+.border-top {
+  border-color: rgba(39, 169, 225, 0.25) !important; }

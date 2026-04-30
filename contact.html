@@ -66,7 +66,7 @@
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-2">
-              <h2 class="mb-0 site-logo"><a href="index.html">Dr. Akram</a></h2>
+              <h2 class="mb-0 site-logo"><a href="index.html"><img src="images/logo-akram.png" alt="Dr. Akram Lefrarni"></a></h2>
             </div>
             <div class="col-10">
               <nav class="site-navigation text-right" role="navigation">
@@ -109,27 +109,27 @@
           
             <h2 class="site-heading text-black mb-5"><strong>Appointment</strong></h2>
           
-            <form action="#" class="p-5 bg-white mb-5 mb-lg-0">
+            <form action="#" class="p-5 bg-white mb-5 mb-lg-0 js-whatsapp-form" data-whatsapp-type="appointment">
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fname">Prenom</label>
-                  <input type="text" id="fname" class="form-control" placeholder="Prenom">
+                  <input type="text" id="fname" name="fname" class="form-control" placeholder="Prenom">
                 </div>
                 <div class="col-md-6">
                   <label class="font-weight-bold" for="lname">Nom</label>
-                  <input type="text" id="lname" class="form-control" placeholder="Nom">
+                  <input type="text" id="lname" name="lname" class="form-control" placeholder="Nom">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="date">Date</label> 
-                  <input type="text" id="date" class="form-control datepicker px-2" placeholder="Date de visite">
+                  <input type="text" id="date" name="date" class="form-control datepicker px-2" placeholder="Date de visite">
                 </div>
                 <div class="col-md-6">
-                  <label class="font-weight-bold" for="email">Telephone ou email</label> 
-                  <input type="email" id="email" class="form-control" placeholder="Votre contact">
+                  <label class="font-weight-bold" for="appointment-contact">Telephone ou email</label> 
+                  <input type="text" id="appointment-contact" name="contact" class="form-control" placeholder="Votre contact">
                 </div>
               </div>
 
@@ -137,11 +137,11 @@
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="treatment">Soin souhaite</label> 
                   <select name="treatment" id="treatment" class="form-control">
-                    <option value="">Consultation et detartrage</option>
-                    <option value="">Urgence dentaire</option>
-                    <option value="">Implants dentaires</option>
-                    <option value="">Orthodontie</option>
-                    <option value="">Blanchiment</option>
+                    <option value="Consultation et detartrage">Consultation et detartrage</option>
+                    <option value="Urgence dentaire">Urgence dentaire</option>
+                    <option value="Implants dentaires">Implants dentaires</option>
+                    <option value="Orthodontie">Orthodontie</option>
+                    <option value="Blanchiment">Blanchiment</option>
                   </select>
                 </div>
               </div>
@@ -166,18 +166,18 @@
           
             <h2 class="site-heading text-black mb-5">Nous <strong>Contacter</strong></h2>
           
-            <form action="#" class="p-5 bg-white">
+            <form action="#" class="p-5 bg-white js-whatsapp-form" data-whatsapp-type="contact">
 
               <div class="row form-group">
                 <div class="col-md-12 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fullname">Nom complet</label>
-                  <input type="text" id="fullname" class="form-control" placeholder="Nom complet">
+                  <input type="text" id="fullname" name="fullname" class="form-control" placeholder="Nom complet">
                 </div>
               </div>
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="font-weight-bold" for="email">Email</label>
-                  <input type="email" id="email" class="form-control" placeholder="Adresse email">
+                  <label class="font-weight-bold" for="contact-email">Email</label>
+                  <input type="email" id="contact-email" name="email" class="form-control" placeholder="Adresse email">
                 </div>
               </div>
 

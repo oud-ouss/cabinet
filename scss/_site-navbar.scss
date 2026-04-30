@@ -23,8 +23,17 @@
 	.site-logo {
 		font-weight: 200;
 		a {
+			display: inline-flex;
+			align-items: center;
 			font-weight: 200;
 			color: $white;
+		}
+		img {
+			display: block;
+			width: auto;
+			max-width: 160px;
+			height: 52px;
+			object-fit: contain;
 		}
 	}
 
@@ -86,7 +95,7 @@
 					position: absolute;
 					text-align: left;
 					// border-top: 2px solid $primary;
-					box-shadow: 0 0px 4px 0px rgba(0,0,0,.25);
+					box-shadow: 0 0px 4px 0px rgba($blue,.25);
 					border-left: 1px solid $gray-4;
 					border-right: 1px solid $gray-4;
 					border-bottom: 1px solid $gray-4;
@@ -122,7 +131,7 @@
 						text-transform: none;
 						letter-spacing: normal;
 						transition: 0s all;
-						color: $gray-800;
+						color: $blue;
 					}
 					.active {
 						> a {
@@ -138,8 +147,8 @@
 							padding: 9px 20px;
 							display: block;
 							&:hover {
-								background: lighten($gray-4, 2%);
-								color: $gray-1;
+								background: $white;
+								color: $primary;
 							}
 						}
 
@@ -156,8 +165,8 @@
 							}
 							&:hover, &:active, &:focus {
 								> a {
-									background: lighten($gray-4, 2%);
-									color: $gray-1;
+									background: $white;
+									color: $primary;
 								}
 							}
 						}
@@ -200,7 +209,7 @@
 	height: calc(100vh);
 	
 	transform: translateX(110%);
-	box-shadow: -10px 0 20px -10px rgba(0,0,0,.1);
+	box-shadow: -10px 0 20px -10px rgba($blue,.25);
 	transition: .3s all ease-in-out;
 
 	.offcanvas-menu & {
@@ -225,7 +234,7 @@
 				cursor: pointer;
 				transition: .3s all ease;
 				&:hover {
-					color: $gray-1;
+					color: $primary;
 				}
 			}
 		}
@@ -271,7 +280,7 @@
 			padding: 10px 20px;
 			display: block;
 			position: relative;
-			color: $gray-900;
+			color: $blue;
 			&:hover {
 				color: $primary;
 			}
@@ -296,7 +305,7 @@
 			cursor: pointer;
 			border-radius: 50%;
 			&:hover {
-				background: $gray-100;
+				background: $white;
 			}
 			&:before {
 				font-size: 12px;

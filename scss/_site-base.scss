@@ -1,16 +1,16 @@
 body {
 	line-height: 1.7;
-	color: lighten($black, 30%);
+	color: $blue;
 	font-weight: 300;
 	font-size: $font-size-base + .1rem;
 	font-family: $font-family-sans-serif;
 }
 ::-moz-selection { 
-	background: $black;
+	background: $primary;
 	color: $white;
 }
 ::selection { 
-	background: $black;
+	background: $primary;
 	color: $white;
 }
 a {
@@ -21,16 +21,16 @@ a {
 }
 
 .text-black {
-	color: $black!important;
+	color: $blue!important;
 }
 .bg-black {
-	background: $black!important;
+	background: $blue!important;
 }
 
 .site-wrap {
 	&:before {
 		transition: .3s all ease-in-out;
-		background: rgba(0,0,0,.6);
+		background: rgba($blue,.85);
 		content: "";
 		position: absolute;
 		z-index: 2000;
@@ -67,9 +67,9 @@ a {
 		box-shadow: none!important;
 	}
 	&.btn-secondary {
-		background-color: lighten($secondary, 45%);
-		border-color: lighten($secondary, 45%);
-		color: $black;
+		background-color: $blue;
+		border-color: $blue;
+		color: $white;
 	}
 	&.btn-sm {
 		font-size: $font-size-base - .1rem;
@@ -79,14 +79,14 @@ a {
 		letter-spacing: .2em;
 	}
 	&:hover {
-		box-shadow: 0 5px 20px -7px rgba(0,0,0,.9)!important;
+		box-shadow: 0 5px 20px -7px rgba($blue,.6)!important;
 		top: -2px;
 	}
 	
 }
 
 .bg-black {
-	background: $black;
+	background: $blue;
 }
 .form-control {
 	height: 47px;
@@ -143,17 +143,17 @@ a {
 
 .site-footer {
 	padding: 4em 0;
-	background: lighten($black, 20%);
+	background: $blue;
 	p {
-		color: lighten($black, 45%); 
+		color: rgba($white, .75); 
 	}
 	h2,h3,h4,h5 {
 		color: $white;
 	}
 	a {
-		color: lighten($black, 60%); 
+		color: rgba($white, .75); 
 		&:hover {
-			color: lighten($black, 100%); 
+			color: $white; 
 		}
 	}
 	ul {
@@ -169,8 +169,8 @@ a {
 
 .bg-text-line {
   display: inline;
-  background: $black;
-  box-shadow: 20px 0 0 $black, -20px 0 0 $black;
+  background: $blue;
+  box-shadow: 20px 0 0 $blue, -20px 0 0 $blue;
 }
 
 .bg-image {
@@ -193,7 +193,7 @@ a {
 	}
 	&.overlay {
 		&:before {
-			background: rgba($black, .4);
+			background: rgba($blue, .55);
 		}
 	}
 	&.overlay-primary {

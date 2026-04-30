@@ -240,4 +240,38 @@ jQuery(document).ready(function($) {
 	};
 	siteDatePicker();
 
+	var siteWhatsAppForms = function() {
+		var whatsappNumber = '212536688939';
+
+		$('.js-whatsapp-form').on('submit', function(e) {
+			e.preventDefault();
+
+			var $form = $(this);
+			var formType = $form.data('whatsapp-type');
+			var message = '';
+
+			if (formType === 'appointment') {
+				message = [
+					'Bonjour, je souhaite prendre rendez-vous au cabinet dentaire Dr. Akram Lefrarni.',
+					'Prenom: ' + ($form.find('[name="fname"]').val() || ''),
+					'Nom: ' + ($form.find('[name="lname"]').val() || ''),
+					'Date souhaitee: ' + ($form.find('[name="date"]').val() || ''),
+					'Contact: ' + ($form.find('[name="contact"]').val() || ''),
+					'Soin souhaite: ' + ($form.find('[name="treatment"]').val() || ''),
+					'Message: ' + ($form.find('[name="note"]').val() || '')
+				].join('\n');
+			} else {
+				message = [
+					'Bonjour, je souhaite contacter le cabinet dentaire Dr. Akram Lefrarni.',
+					'Nom complet: ' + ($form.find('[name="fullname"]').val() || ''),
+					'Email: ' + ($form.find('[name="email"]').val() || ''),
+					'Message: ' + ($form.find('[name="message"]').val() || '')
+				].join('\n');
+			}
+
+			window.open('https://wa.me/' + whatsappNumber + '?text=' + encodeURIComponent(message), '_blank');
+		});
+	};
+	siteWhatsAppForms();
+
 });
