@@ -4,7 +4,8 @@
 	width: 100%;
 	left: 0;
 	a {
-		color: $white;
+		color: $black;
+		font-weight: 900;
 	}
 
 	.site-navbar-top {
@@ -44,7 +45,8 @@
 			margin-bottom: 0;
 			.active {
 				> a {
-					color: $white;
+					color: $black;
+					font-weight: 900;
 				}
 			}
 			a {
@@ -59,11 +61,12 @@
 					padding: 10px 10px;
 					text-transform: uppercase;
 					letter-spacing: .05em;
-					color: rgba($white, .6);
+					color: $black;
+					font-weight: 900;
 					font-size: 15px;
 					text-decoration: none!important;
 					&:hover {
-						color: $white;
+						color: $black;
 					}
 				}
 				&:last-child {
@@ -95,7 +98,7 @@
 					position: absolute;
 					text-align: left;
 					// border-top: 2px solid $primary;
-					box-shadow: 0 0px 4px 0px rgba($blue,.25);
+					box-shadow: 0 0px 4px 0px rgba(0,0,0,.25);
 					border-left: 1px solid $gray-4;
 					border-right: 1px solid $gray-4;
 					border-bottom: 1px solid $gray-4;
@@ -131,7 +134,7 @@
 						text-transform: none;
 						letter-spacing: normal;
 						transition: 0s all;
-						color: $blue;
+						color: $gray-800;
 					}
 					.active {
 						> a {
@@ -147,8 +150,8 @@
 							padding: 9px 20px;
 							display: block;
 							&:hover {
-								background: $white;
-								color: $primary;
+								background: lighten($gray-4, 2%);
+								color: $gray-1;
 							}
 						}
 
@@ -165,8 +168,8 @@
 							}
 							&:hover, &:active, &:focus {
 								> a {
-									background: $white;
-									color: $primary;
+									background: lighten($gray-4, 2%);
+									color: $gray-1;
 								}
 							}
 						}
@@ -177,7 +180,7 @@
 				}
 				&:hover, &:focus, &:active {
 					> a {
-						color: $white;
+						color: $black;
 					}
 				}
 				&:hover, &:focus, &:active {
@@ -209,7 +212,7 @@
 	height: calc(100vh);
 	
 	transform: translateX(110%);
-	box-shadow: -10px 0 20px -10px rgba($blue,.25);
+	box-shadow: -10px 0 20px -10px rgba(0,0,0,.1);
 	transition: .3s all ease-in-out;
 
 	.offcanvas-menu & {
@@ -234,7 +237,7 @@
 				cursor: pointer;
 				transition: .3s all ease;
 				&:hover {
-					color: $primary;
+					color: $gray-1;
 				}
 			}
 		}
@@ -280,9 +283,10 @@
 			padding: 10px 20px;
 			display: block;
 			position: relative;
-			color: $blue;
+			color: $gray-900;
+			font-weight: 900;
 			&:hover {
-				color: $primary;
+				color: $black;
 			}
 		}
 		li {
@@ -290,7 +294,7 @@
 			display: block;
 			&.active {
 				> a {
-					color: $primary;
+					color: $black;
 				}
 			}
 		}
@@ -305,7 +309,7 @@
 			cursor: pointer;
 			border-radius: 50%;
 			&:hover {
-				background: $white;
+				background: $gray-100;
 			}
 			&:before {
 				font-size: 12px;
