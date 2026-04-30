@@ -266,6 +266,33 @@
 }
 
 .site-block-testimony {
+	.review-avatar {
+		width: 140px;
+		height: 140px;
+		margin: 0 auto;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: $primary;
+		color: $white;
+		font-size: 36px;
+		font-weight: 900;
+		letter-spacing: .08em;
+	}
+	.review-rating {
+		margin-bottom: .25rem;
+		color: $primary;
+		letter-spacing: .08em;
+	}
+	.review-source {
+		margin-top: -.75rem;
+		margin-bottom: 0;
+		font-size: .85rem;
+		text-transform: uppercase;
+		letter-spacing: .12em;
+		color: lighten($black, 45%);
+	}
 	img {
 		max-width: 140px;
 		border-radius: 50%;

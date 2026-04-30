@@ -690,6 +690,39 @@ a {
       -ms-transform: translate(-60%, -50%);
       transform: translate(-60%, -50%); }
 
+.site-block-testimony .review-avatar {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: #f23a2e;
+  color: #fff;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: .08em; }
+
+.site-block-testimony .review-rating {
+  margin-bottom: .25rem;
+  color: #f23a2e;
+  letter-spacing: .08em; }
+
+.site-block-testimony .review-source {
+  margin-top: -.75rem;
+  margin-bottom: 0;
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #737373; }
+
 .site-block-testimony img {
   max-width: 140px;
   border-radius: 50%; }
