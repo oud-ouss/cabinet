@@ -38,13 +38,13 @@
     
     
     <div class="site-navbar-wrap">
-      <div class="site-navbar-top">
+      <div class="site-navbar-top d-none d-lg-block">
         <div class="container py-2">
           <div class="row align-items-center">
             <div class="col-6">
               <a href="https://share.google/wnuZXoGUFx1GMXEQs" target="_blank" rel="noopener" class="d-inline-flex align-items-center p-2 pl-0">
                 <span class="icon-map-marker mr-2"></span>
-                <span>Itineraire Google Maps</span>
+                <span>localisation</span>
               </a>
             </div>
             <div class="col-6">
@@ -78,10 +78,14 @@
                       <a href="#home">Accueil</a>
                     </li>
                     <li><a href="#cabinet">Cabinet</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#localisation">Localisation</a></li>
+                    <li><a href="#soins">Soins</a></li>
                     <li><a href="#patients">Patients</a></li>
                     <li><a href="#actualites">Actualites</a></li>
-                    <li><a href="#soins">Soins</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="d-lg-none"><a href="https://share.google/wnuZXoGUFx1GMXEQs" target="_blank" rel="noopener"><span class="icon-map-marker mr-2"></span>localisation</a></li>
+                    <li class="d-lg-none"><a href="https://www.instagram.com/dr.akramlefrarni/" target="_blank" rel="noopener"><span class="icon-instagram mr-2"></span>dr.akramlefrarni</a></li>
+                    <li class="d-lg-none"><a href="tel:0536688939"><span class="icon-phone mr-2"></span>05 36 68 89 39</a></li>
                   </ul>
                 </div>
               </nav>
@@ -91,7 +95,7 @@
       </div>
     </div>
 
-    <div id="home" class="site-blocks-cover" style="background-image: url(images/hero-team.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    <div id="home" class="site-blocks-cover hero-team-bg" data-aos="fade">
       <div class="container">
         <div class="row align-items-center"></div>
       </div>
@@ -208,27 +212,27 @@
           <div class="col-lg-6 order-2 order-lg-1">
 
 
-            <form action="#" class="p-5 bg-white">
+            <form action="#" class="p-5 bg-white js-whatsapp-form" data-whatsapp-type="appointment">
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="fname">Prenom</label>
-                  <input type="text" id="fname" class="form-control" placeholder="Prenom">
+                  <input type="text" id="fname" name="fname" class="form-control" placeholder="Prenom">
                 </div>
                 <div class="col-md-6">
                   <label class="font-weight-bold" for="lname">Nom</label>
-                  <input type="text" id="lname" class="form-control" placeholder="Nom">
+                  <input type="text" id="lname" name="lname" class="form-control" placeholder="Nom">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
                   <label class="font-weight-bold" for="date">Date</label> 
-                  <input type="text" id="date" class="form-control datepicker px-2" placeholder="Date de visite">
+                  <input type="text" id="date" name="date" class="form-control datepicker px-2" placeholder="Date de visite">
                 </div>
                 <div class="col-md-6">
-                  <label class="font-weight-bold" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control" placeholder="Email">
+                  <label class="font-weight-bold" for="contact-info">Telephone ou email</label> 
+                  <input type="text" id="contact-info" name="contact" class="form-control" placeholder="Votre contact">
                 </div>
               </div>
 
@@ -236,11 +240,11 @@
                 <div class="col-md-12">
                   <label class="font-weight-bold" for="treatment">Soin souhaite</label> 
                   <select name="treatment" id="treatment" class="form-control">
-                    <option value="">Consultation et detartrage</option>
-                    <option value="">Urgence dentaire</option>
-                    <option value="">Implants dentaires</option>
-                    <option value="">Orthodontie</option>
-                    <option value="">Blanchiment</option>
+                    <option value="Consultation et detartrage">Consultation et detartrage</option>
+                    <option value="Urgence dentaire">Urgence dentaire</option>
+                    <option value="Implants dentaires">Implants dentaires</option>
+                    <option value="Orthodontie">Orthodontie</option>
+                    <option value="Blanchiment">Blanchiment</option>
                   </select>
                 </div>
               </div>

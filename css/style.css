@@ -192,12 +192,12 @@ a {
     font-size: 0.8rem; }
 
 .site-navbar-top, .site-navbar {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+  border-bottom: 0; }
 
 .site-navbar {
   margin-bottom: 0px;
   width: 100%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
+  border-bottom: 0; }
   .site-navbar .site-logo {
     font-weight: 200; }
     .site-navbar .site-logo a {
@@ -268,9 +268,7 @@ a {
         text-align: left;
         -webkit-box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.25);
         box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.25);
-        border-left: 1px solid #edf0f5;
-        border-right: 1px solid #edf0f5;
-        border-bottom: 1px solid #edf0f5;
+        border: 0;
         padding: 0px 0;
         margin-top: 20px;
         margin-left: 0px;
@@ -472,9 +470,24 @@ a {
 
 /* Blocks */
 .site-blocks-cover {
+  position: relative;
+  overflow: hidden;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top; }
+  .site-blocks-cover > .container {
+    position: relative;
+    z-index: 1; }
+  .site-blocks-cover.hero-team-bg {
+    background-image: none; }
+    .site-blocks-cover.hero-team-bg:before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-image: url("../images/hero-team.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top; }
   .site-blocks-cover.overlay {
     position: relative; }
     .site-blocks-cover.overlay:before {
@@ -493,12 +506,13 @@ a {
     height: calc(80vh); }
   @media (max-width: 767.98px) {
     .site-blocks-cover {
-      background-size: 100% auto;
-      background-position: center top;
       background-color: #fff; }
       .site-blocks-cover, .site-blocks-cover .row {
-        min-height: 300px;
-        height: 300px; } }
+        min-height: 255px;
+        height: 255px; }
+      .site-blocks-cover.hero-team-bg:before {
+        background-size: 100% auto;
+        background-position: center top; } }
   .site-blocks-cover .sub-text {
     font-size: 1.1rem;
     text-transform: uppercase;
@@ -550,6 +564,9 @@ a {
 
 .site-block-1 {
   padding-top: 50px; }
+  @media (max-width: 767.98px) {
+    .site-block-1 {
+      padding-top: 18px; } }
   @media (min-width: 992px) {
     .site-block-1 {
       padding-top: 0;

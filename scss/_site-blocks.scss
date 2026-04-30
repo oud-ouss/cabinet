@@ -1,7 +1,25 @@
 .site-blocks-cover {
+	position: relative;
+	overflow: hidden;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
+	> .container {
+		position: relative;
+		z-index: 1;
+	}
+	&.hero-team-bg {
+		background-image: none;
+		&:before {
+			position: absolute;
+			content: "";
+			inset: 0;
+			background-image: url("../images/hero-team.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: top;
+		}
+	}
 	&.overlay {
 		position: relative;
 		&:before {
@@ -25,12 +43,16 @@
 		}
 	}
 	@include media-breakpoint-down(sm) {
-		background-size: 100% auto;
-		background-position: center top;
 		background-color: $white;
 		&, .row {
-			min-height: 300px;
-			height: 300px;
+			min-height: 255px;
+			height: 255px;
+		}
+		&.hero-team-bg {
+			&:before {
+				background-size: 100% auto;
+				background-position: center top;
+			}
 		}
 	}
 	.sub-text {
@@ -96,6 +118,9 @@
 
 .site-block-1 {
 	padding-top: 50px;
+	@include media-breakpoint-down(sm) {
+		padding-top: 18px;
+	}
 	@include media-breakpoint-up(lg) {
 		padding-top: 0;
 		position: absolute;
