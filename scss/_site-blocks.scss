@@ -24,6 +24,15 @@
 			height: calc(80vh);	
 		}
 	}
+	@include media-breakpoint-down(sm) {
+		background-size: contain;
+		background-position: center 96px;
+		background-color: $white;
+		&, .row {
+			min-height: 360px;
+			height: 56vh;
+		}
+	}
 	.sub-text {
 		font-size: $font-size-base + .1rem;	
 		text-transform: uppercase;

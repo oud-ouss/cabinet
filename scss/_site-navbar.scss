@@ -1,8 +1,11 @@
 .site-navbar-wrap {
-	position: absolute;
-	z-index: 99;
+	position: fixed;
+	z-index: 1000;
 	width: 100%;
 	left: 0;
+	top: 0;
+	background: $white;
+	box-shadow: 0 5px 20px -12px rgba($black, .35);
 	a {
 		color: $black;
 		font-weight: 900;
@@ -13,13 +16,12 @@
 	}
 }
 .site-navbar-top, .site-navbar {
-	
-	border-bottom: 1px solid rgba($white, .1);
+	border-bottom: 1px solid rgba($black, .08);
 }
 .site-navbar {
 	margin-bottom: 0px;
 	width: 100%;
-	border-bottom: 1px solid rgba($white, .1);
+	border-bottom: 1px solid rgba($black, .08);
 	
 	.site-logo {
 		font-weight: 200;
@@ -61,7 +63,7 @@
 					padding: 10px 10px;
 					text-transform: uppercase;
 					letter-spacing: .05em;
-					color: $black;
+					color: $primary;
 					font-weight: 900;
 					font-size: 15px;
 					text-decoration: none!important;

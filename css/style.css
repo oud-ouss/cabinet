@@ -6,6 +6,12 @@ body {
   font-size: 1.1rem;
   font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
+html {
+  scroll-behavior: smooth; }
+
+[id] {
+  scroll-margin-top: 104px; }
+
 ::-moz-selection {
   background: #000;
   color: #fff; }
@@ -178,10 +184,14 @@ a {
 
 /* Navbar */
 .site-navbar-wrap {
-  position: absolute;
-  z-index: 99;
+  position: fixed;
+  z-index: 1000;
   width: 100%;
-  left: 0; }
+  left: 0;
+  top: 0;
+  background: #fff;
+  -webkit-box-shadow: 0 5px 20px -12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 5px 20px -12px rgba(0, 0, 0, 0.35); }
   .site-navbar-wrap a {
     color: #000;
     font-weight: 900; }
@@ -189,12 +199,12 @@ a {
     font-size: 0.8rem; }
 
 .site-navbar-top, .site-navbar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
 
 .site-navbar {
   margin-bottom: 0px;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08); }
   .site-navbar .site-logo {
     font-weight: 200; }
     .site-navbar .site-logo a {
@@ -229,7 +239,7 @@ a {
         padding: 10px 10px;
         text-transform: uppercase;
         letter-spacing: .05em;
-        color: #000;
+        color: #f23a2e;
         font-weight: 900;
         font-size: 15px;
         text-decoration: none !important; }
@@ -485,6 +495,14 @@ a {
   .site-blocks-cover.inner-page, .site-blocks-cover.inner-page .row {
     min-height: 600px;
     height: calc(80vh); }
+  @media (max-width: 767.98px) {
+    .site-blocks-cover {
+      background-size: contain;
+      background-position: center 96px;
+      background-color: #fff; }
+      .site-blocks-cover, .site-blocks-cover .row {
+        min-height: 360px;
+        height: 56vh; } }
   .site-blocks-cover .sub-text {
     font-size: 1.1rem;
     text-transform: uppercase;

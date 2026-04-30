@@ -5,6 +5,12 @@ body {
 	font-size: $font-size-base + .1rem;
 	font-family: $font-family-sans-serif;
 }
+html {
+	scroll-behavior: smooth;
+}
+[id] {
+	scroll-margin-top: 104px;
+}
 ::-moz-selection { 
 	background: $black;
 	color: $white;
