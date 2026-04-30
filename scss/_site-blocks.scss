@@ -145,6 +145,13 @@
 .site-block-feature {
 	background: rgba($black, .5);
 	position: relative;
+	@include media-breakpoint-down(sm) {
+		background: $black;
+		opacity: 1;
+		p {
+			color: $white;
+		}
+	}
 	
 	.icon {
 		font-size: 50px;
