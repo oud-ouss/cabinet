@@ -145,7 +145,7 @@ a {
 }
 
 .site-footer {
-	padding: 4em 0;
+	padding: 2.5em 0 1.75em;
 	background: lighten($black, 20%);
 	p {
 		color: lighten($black, 45%); 
@@ -167,6 +167,12 @@ a {
 	.footer-heading {
 		font-size: 20px;
 		color: $white;
+	}
+	.footer-contact-links {
+		a {
+			display: block;
+			margin-bottom: 14px;
+		}
 	}
 }
 
