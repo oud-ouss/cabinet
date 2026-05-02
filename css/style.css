@@ -248,6 +248,15 @@ a {
         padding-right: 0; }
         .site-navbar .site-navigation .site-menu > li:last-child > a {
           padding-right: 0; }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      .site-navbar .site-navigation .site-menu {
+        white-space: nowrap; }
+        .site-navbar .site-navigation .site-menu > li {
+          padding: 8px 1px; }
+          .site-navbar .site-navigation .site-menu > li > a {
+            padding: 8px 6px;
+            font-size: 13px;
+            letter-spacing: .035em; } }
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
       .site-navbar .site-navigation .site-menu .has-children > a {

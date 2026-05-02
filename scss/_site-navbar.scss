@@ -78,6 +78,17 @@
 					}
 				}
 			}
+			@include media-breakpoint-only(lg) {
+				white-space: nowrap;
+				> li {
+					padding: 8px 1px;
+					> a {
+						padding: 8px 6px;
+						font-size: 13px;
+						letter-spacing: .035em;
+					}
+				}
+			}
 			.has-children {
 				position: relative;
 				> a {
