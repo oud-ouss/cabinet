@@ -353,9 +353,17 @@ a {
   position: fixed;
   right: 0;
   z-index: 2000;
-  padding-top: 20px;
+  padding-top: 0;
   background: #fff;
-  height: calc(100vh);
+  height: 100vh;
+  height: 100dvh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
   transform: translateX(110%);
@@ -370,12 +378,23 @@ a {
     transform: translateX(0%); }
   .site-mobile-menu .site-mobile-menu-header {
     width: 100%;
-    float: left;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 70px;
+    flex: 0 0 70px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px; }
     .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close {
-      float: right;
-      margin-top: 8px; }
+      margin-left: auto;
+      margin-top: 0; }
       .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-close span {
         font-size: 30px;
         display: inline-block;
@@ -390,7 +409,7 @@ a {
           color: #25262a; }
     .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo {
       float: left;
-      margin-top: 4px;
+      margin-top: 0;
       margin-left: 0px; }
       .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a {
         display: inline-block;
@@ -405,11 +424,15 @@ a {
         .site-mobile-menu .site-mobile-menu-header .site-mobile-menu-logo a:hover {
           text-decoration: none; }
   .site-mobile-menu .site-mobile-menu-body {
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     position: relative;
     padding: 20px;
-    height: calc(100vh - 52px);
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 0;
+    height: auto;
     padding-bottom: 28px; }
   .site-mobile-menu .site-nav-wrap {
     padding: 0;

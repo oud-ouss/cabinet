@@ -218,9 +218,12 @@
 	position: fixed;
 	right: 0;
 	z-index: 2000;
-	padding-top: 20px;
+	padding-top: 0;
 	background: $white;
-	height: calc(100vh);
+	height: 100vh;
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
 	
 	transform: translateX(110%);
 	box-shadow: -10px 0 20px -10px rgba(0,0,0,.1);
@@ -232,13 +235,16 @@
 
 	.site-mobile-menu-header {
 		width: 100%;
-		float: left;
+		flex: 0 0 70px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		padding-left: 20px;
 		padding-right: 20px;
 		
 		.site-mobile-menu-close {
-			float: right;
-			margin-top: 8px;
+			margin-left: auto;
+			margin-top: 0;
 			span {
 				font-size: 30px;
 				display: inline-block;
@@ -253,8 +259,7 @@
 			}
 		}
 		.site-mobile-menu-logo {
-			float: left;
-			margin-top: 4px;
+			margin-top: 0;
 			margin-left: 0px;
 			a {
 				display: inline-block;
@@ -275,12 +280,13 @@
 
 	.site-mobile-menu-body {
 		// height: 400px;
-		overflow-y: scroll;
+		overflow-y: auto;
   	-webkit-overflow-scrolling: touch;
 		position: relative;
 		padding: 20px;
-
-		height: calc(100vh - 52px);
+		flex: 1 1 auto;
+		min-height: 0;
+		height: auto;
 		padding-bottom: 28px;
 
 	}
