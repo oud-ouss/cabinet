@@ -94,6 +94,23 @@ jQuery(document).ready(function($) {
 	}; 
 	siteMenuClone();
 
+	var siteStickyHeader = function() {
+		var $navbar = $('.site-navbar-wrap');
+		var stickAfter = 140;
+
+		function updateHeader() {
+			if ($(window).width() >= 992 && $(window).scrollTop() > stickAfter) {
+				$navbar.addClass('is-stuck');
+			} else {
+				$navbar.removeClass('is-stuck');
+			}
+		}
+
+		updateHeader();
+		$(window).on('scroll resize', updateHeader);
+	};
+	siteStickyHeader();
+
 
 	var sitePlusMinus = function() {
 		$('.js-btn-minus').on('click', function(e){

@@ -187,12 +187,26 @@ a {
   position: absolute;
   z-index: 99;
   width: 100%;
-  left: 0; }
+  left: 0;
+  top: 0;
+  -webkit-transition: background .2s ease, -webkit-box-shadow .2s ease;
+  transition: background .2s ease, -webkit-box-shadow .2s ease;
+  -o-transition: background .2s ease, box-shadow .2s ease;
+  transition: background .2s ease, box-shadow .2s ease;
+  transition: background .2s ease, box-shadow .2s ease, -webkit-box-shadow .2s ease; }
   .site-navbar-wrap a {
     color: #000;
     font-weight: 900; }
   .site-navbar-wrap .site-navbar-top {
     font-size: 0.8rem; }
+  @media (min-width: 992px) {
+    .site-navbar-wrap.is-stuck {
+      position: fixed;
+      background: rgba(255, 255, 255, 0.96);
+      -webkit-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); }
+      .site-navbar-wrap.is-stuck .site-navbar-top {
+        display: none !important; } }
 
 .site-navbar-top, .site-navbar {
   border-bottom: 0; }
@@ -748,13 +762,15 @@ a {
   position: relative; }
   .site-block-half.site-block-video .image.video-panel {
     overflow: hidden;
-    background: #000; }
+    background: #000;
+    aspect-ratio: 1 / 1; }
   .site-block-half.site-block-video .image .site-inline-video {
     width: 100%;
     height: 100%;
-    min-height: 400px;
+    min-height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
+    object-position: center center;
     display: block; }
   .site-block-half.site-block-video .image .play-button {
     position: absolute;
@@ -780,6 +796,12 @@ a {
       -webkit-transform: translate(-60%, -50%);
       -ms-transform: translate(-60%, -50%);
       transform: translate(-60%, -50%); }
+
+.site-block-cabinet-media {
+  padding-top: 2.5em; }
+  @media (min-width: 768px) {
+    .site-block-cabinet-media {
+      padding-top: 5em; } }
 
 .site-block-testimony .review-avatar {
   width: 140px;

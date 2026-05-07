@@ -3,6 +3,8 @@
 	z-index: 99;
 	width: 100%;
 	left: 0;
+	top: 0;
+	transition: background .2s ease, box-shadow .2s ease;
 	a {
 		color: $black;
 		font-weight: 900;
@@ -10,6 +12,16 @@
 
 	.site-navbar-top {
 		font-size: $font-size-base - .2rem;
+	}
+	@include media-breakpoint-up(lg) {
+		&.is-stuck {
+			position: fixed;
+			background: rgba($white, .96);
+			box-shadow: 0 8px 24px rgba($black, .08);
+			.site-navbar-top {
+				display: none!important;
+			}
+		}
 	}
 }
 .site-navbar-top, .site-navbar {

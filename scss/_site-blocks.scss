@@ -293,6 +293,13 @@
 	}
 }
 
+.site-block-cabinet-media {
+	padding-top: 2.5em;
+	@include media-breakpoint-up(md) {
+		padding-top: 5em;
+	}
+}
+
 .site-block-testimony {
 	.review-avatar {
 		width: 140px;
