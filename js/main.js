@@ -149,6 +149,7 @@ jQuery(document).ready(function($) {
 				language: 'fr',
 				weekStart: 1,
 				daysOfWeekDisabled: [0],
+				startDate: '0d',
 				orientation: 'bottom auto',
 				templates: {
 					leftArrow: '&lsaquo;',
