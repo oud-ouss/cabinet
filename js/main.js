@@ -137,6 +137,45 @@ jQuery(document).ready(function($) {
 	};
 	siteDatePicker();
 
+	var siteTreatmentModal = function() {
+		var $modal = $('#appointmentModal');
+		if (!$modal.length) return;
+
+		function openTreatmentModal(treatment) {
+			var $select = $modal.find('[name="treatment"]');
+
+			if (treatment && !$select.find('option[value="' + treatment + '"]').length) {
+				$select.append($('<option>', {
+					value: treatment,
+					text: treatment
+				}));
+			}
+
+			if (treatment) {
+				$select.val(treatment);
+			}
+
+			$modal.modal('show');
+		}
+
+		$('body').on('click', '.js-treatment-modal', function(e) {
+			e.preventDefault();
+			openTreatmentModal($(this).data('treatment') || $.trim($(this).find('h3').first().text()));
+		});
+
+		$('body').on('keydown', '.js-treatment-modal[role="button"]', function(e) {
+			if (e.key === 'Enter' || e.key === ' ') {
+				e.preventDefault();
+				openTreatmentModal($(this).data('treatment') || $.trim($(this).find('h3').first().text()));
+			}
+		});
+
+		$modal.on('shown.bs.modal', function() {
+			$modal.find('[name="fname"]').trigger('focus');
+		});
+	};
+	siteTreatmentModal();
+
 	var siteWhatsAppForms = function() {
 		var whatsappNumber = '212624772348';
 
