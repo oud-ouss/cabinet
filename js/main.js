@@ -131,7 +131,30 @@ jQuery(document).ready(function($) {
 	var siteDatePicker = function() {
 
 		if ( $('.datepicker').length > 0 ) {
-			$('.datepicker').datepicker();
+			$.fn.datepicker.dates.fr = {
+				days: ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'],
+				daysShort: ['dim.', 'lun.', 'mar.', 'mer.', 'jeu.', 'ven.', 'sam.'],
+				daysMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+				months: ['janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'aout', 'septembre', 'octobre', 'novembre', 'decembre'],
+				monthsShort: ['janv.', 'fevr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'aout', 'sept.', 'oct.', 'nov.', 'dec.'],
+				today: "Aujourd'hui",
+				clear: 'Effacer',
+				titleFormat: 'MM yyyy'
+			};
+
+			$('.datepicker').datepicker({
+				format: 'dd/mm/yyyy',
+				autoclose: true,
+				todayHighlight: true,
+				language: 'fr',
+				weekStart: 1,
+				daysOfWeekDisabled: [0],
+				orientation: 'bottom auto',
+				templates: {
+					leftArrow: '&lsaquo;',
+					rightArrow: '&rsaquo;'
+				}
+			});
 		}
 
 	};
